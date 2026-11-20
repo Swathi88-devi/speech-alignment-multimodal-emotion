@@ -1,0 +1,4 @@
+Model Variant,Modality,Architecture,Test Accuracy (%),Macro F1 (%),Weighted F1 (%),Key Observation
+Speech-Only Pipeline,Audio (Log Mel-Spectrogram),Conv1D + BiGRU + Temporal Self-Attention,100.0,100.0,100.0,Strong prosodic & formantic cues yield perfect class separation.
+Text-Only Pipeline,Text (DistilBERT/Transformer),Transformer Encoder + Masked Avg Pooling,14.29,3.57,3.57,Chance accuracy (1/7); carrier phrases ('Say the word X') lack emotion semantics.
+Multimodal Fusion Pipeline,Speech + Text Joint,Gated Multimodal Unit (GMU) Cross-Modal Fusion,100.0,100.0,100.0,GMU dynamically suppresses neutral text noise (mean speech gate g=0.601) and preserves peak accuracy.

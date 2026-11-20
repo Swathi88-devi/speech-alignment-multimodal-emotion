@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large Datasets & Caches (> 100 MB GitHub limit)
+project/data/TESS/
+project/data/tess_preprocessed.pt
+*.zip
+
+# Operating System Files
+.DS_Store
+Thumbs.db

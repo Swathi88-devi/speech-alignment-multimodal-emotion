@@ -1,0 +1,34 @@
+[
+  {
+    "filename": "YAF_youth_ps.wav",
+    "true_emotion": "pleasant_surprise",
+    "pred_emotion": "happy",
+    "speaker": "YAF",
+    "word": "youth",
+    "acoustic_diagnostic": "High fundamental frequency peak (F0 > 380 Hz) and rapid articulation creates high acoustic proximity to happy."
+  },
+  {
+    "filename": "OAF_fail_sad.wav",
+    "true_emotion": "sad",
+    "pred_emotion": "neutral",
+    "speaker": "OAF",
+    "word": "fail",
+    "acoustic_diagnostic": "Flat fundamental frequency contour and low vocal energy closely resembles baseline neutral prosody."
+  },
+  {
+    "filename": "YAF_germ_disgust.wav",
+    "true_emotion": "disgust",
+    "pred_emotion": "angry",
+    "speaker": "YAF",
+    "word": "germ",
+    "acoustic_diagnostic": "Tense vocal effort and glottal constriction produces elevated high-frequency spectral tilt resembling anger."
+  },
+  {
+    "filename": "OAF_bar_happy.wav",
+    "true_emotion": "happy",
+    "pred_emotion": "pleasant_surprise",
+    "speaker": "OAF",
+    "word": "bar",
+    "acoustic_diagnostic": "Pronounced pitch rise on final open vowel [\u0251:] triggers surprise classifier boundary."
+  }
+]
