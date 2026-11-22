@@ -202,7 +202,7 @@ The clean 280-utterance test split achieves **100.00% empirical test accuracy (2
 │ ✓ Portable Standalone Test Cache: 48.7 MB test cache committed to Git for instant zero-download runs.  │
 │ ✓ Latent Space & Failure Analysis: 128-d latents extracted; 2D t-SNE plots and diagnostic JSON saved.  │
 │ ✓ Publication PDF Reports: Compiled with verified candidate credentials (Perabattula Swathi Naga Devi) │
-│   in reports/Final_Comprehensive_Technical_Report.pdf (4 Pages) and task-specific PDFs.               │
+│   in reports/Technical_Report.pdf (4 Pages) and task-specific PDFs.               │
 │ ✓ GitHub Repository: 100% clean working tree synchronized to Swathi88-devi/speech-alignment-...       │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
