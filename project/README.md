@@ -5,11 +5,11 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Author:** Swathi Naga Devi  
+**Author:** Perabattula Swathi Naga Devi  
 **Email:** [nagadeviperabathula@gmail.com](mailto:nagadeviperabathula@gmail.com)  
 **GitHub:** [Swathi88-devi](https://github.com/Swathi88-devi)  
-**Target Institute:** IIIT-Hyderabad LTRC Evaluation  
-**Date:** November 2026  
+
+**Date:** 22 November 2026  
 
 ---
 

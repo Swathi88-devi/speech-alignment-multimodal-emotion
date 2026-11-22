@@ -6,11 +6,11 @@
 [![Transformers](https://img.shields.io/badge/Transformers-4.30%2B-yellow.svg)](https://huggingface.co/docs/transformers/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Author:** Swathi Naga Devi  
+**Author:** Perabattula Swathi Naga Devi  
 **Email:** [nagadeviperabathula@gmail.com](mailto:nagadeviperabathula@gmail.com)  
 **GitHub:** [Swathi88-devi](https://github.com/Swathi88-devi)  
-**Target Institute:** IIIT-Hyderabad LTRC Evaluation  
-**Date:** November 2026  
+
+**Date:** 22 November 2026  
 
 ---
 

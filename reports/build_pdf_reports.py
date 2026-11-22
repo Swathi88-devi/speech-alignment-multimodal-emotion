@@ -106,7 +106,7 @@ def build_pdf_2a():
 
     # Title & Header
     story.append(Paragraph("Assignment 2a: Forced Alignment using Montreal Forced Aligner", title_style))
-    story.append(Paragraph("<b>Author:</b> Swathi Naga Devi | <b>Email:</b> nagadeviperabathula@gmail.com | <b>GitHub:</b> github.com/Swathi88-devi | <b>Date:</b> November 2026", subtitle_style))
+    story.append(Paragraph("<b>Author:</b> Perabattula Swathi Naga Devi | <b>Email:</b> nagadeviperabathula@gmail.com | <b>GitHub:</b> github.com/Swathi88-devi | <b>Date:</b> 22 November 2026", subtitle_style))
     story.append(Spacer(1, 6))
 
     # 1. Theoretical Foundations
@@ -203,7 +203,7 @@ def build_pdf_2b():
 
     # Title
     story.append(Paragraph("Assignment 2b: Multimodal Emotion Recognition on TESS", title_style))
-    story.append(Paragraph("<b>Author:</b> Swathi Naga Devi | <b>Email:</b> nagadeviperabathula@gmail.com | <b>GitHub:</b> github.com/Swathi88-devi | <b>Date:</b> November 2026", subtitle_style))
+    story.append(Paragraph("<b>Author:</b> Perabattula Swathi Naga Devi | <b>Email:</b> nagadeviperabathula@gmail.com | <b>GitHub:</b> github.com/Swathi88-devi | <b>Date:</b> 22 November 2026", subtitle_style))
     story.append(Spacer(1, 4))
 
     # Section A: Architecture Decisions

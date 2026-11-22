@@ -4,8 +4,8 @@
 **Author:** Perabattula Swathi Naga Devi  
 **Email:** nagadeviperabathula@gmail.com  
 **GitHub:** [Swathi88-devi](https://github.com/Swathi88-devi)  
-**Target Institute:** IIIT Hyderabad (Speech & Vision / LTRC Evaluation)  
-**Date:** November 2026  
+
+**Date:** 22 November 2026  
 **Artifacts Generated:** 3 Model Pipelines (`speech_pipeline`, `text_pipeline`, `fusion_pipeline`), Accuracy Tables (`Results/accuracy_tables.csv`), Normalized Confusion Matrices, Loss Curves, t-SNE Latent Space Visualizations, Failure Case Diagnostics.
 
 ---
