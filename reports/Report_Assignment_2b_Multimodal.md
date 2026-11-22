@@ -1,7 +1,7 @@
 # Assignment 2b: Multimodal Emotion Recognition on TESS
 ## Comprehensive Technical & Scientific Evaluation Report
 
-**Author:** Swathi Naga Devi  
+**Author:** Perabattula Swathi Naga Devi  
 **Email:** nagadeviperabathula@gmail.com  
 **GitHub:** [Swathi88-devi](https://github.com/Swathi88-devi)  
 **Target Institute:** IIIT Hyderabad (Speech & Vision / LTRC Evaluation)  
