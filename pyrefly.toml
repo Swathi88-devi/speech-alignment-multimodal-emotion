@@ -1,4 +1,5 @@
 [tool.pyrefly]
+python-interpreter-path = "C:/Users/nagad/AppData/Local/Programs/Python/Python311/python.exe"
 search-path = [".", "project", "Ass_2/Assignment 2a"]
 site-packages-path = ["C:/Users/nagad/AppData/Local/Programs/Python/Python311/Lib/site-packages"]
 
