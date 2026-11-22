@@ -69,7 +69,8 @@ def get_dataloaders(batch_size=32, cache_path=DEFAULT_CACHE):
 
 if __name__ == "__main__":
     tl, vl, te_l, meta = get_dataloaders(32)
-    sample = next(iter(tl))
+    loader = tl if tl is not None else te_l
+    sample = next(iter(loader))
     print(f"DataLoaders loaded successfully!")
     print(f"Batch mel shape: {sample['mel'].shape}")
     print(f"Batch tokens shape: {sample['tokens'].shape}")
