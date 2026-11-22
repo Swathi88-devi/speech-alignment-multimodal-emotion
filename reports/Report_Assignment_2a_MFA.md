@@ -1,8 +1,10 @@
 # Assignment 2a: Forced Alignment using Montreal Forced Aligner (MFA)
 ## Technical Report & Phonetic Acoustic Analysis
 
-**Author:** Antigravity Research Engineering  
-**Target Institute:** IIIT Hyderabad (Speech & Vision / LTRC)  
+**Author:** Swathi Naga Devi  
+**Email:** nagadeviperabathula@gmail.com  
+**GitHub:** [Swathi88-devi](https://github.com/Swathi88-devi)  
+**Target Institute:** IIIT Hyderabad (Speech & Vision / LTRC Evaluation)  
 **Date:** November 2026  
 **Artifacts Generated:** 6 Praat `.TextGrid` files, custom ARPAbet dictionary (100% coverage), alignment plots, automated pipelines.
 
@@ -39,12 +41,12 @@ The provided evaluation dataset comprises two distinct speech genres:
 
 | Utterance ID | Audio Genre | Sampling Rate | Duration (s) | Word Count | Phoneme Count | Lexical / Phonetic Characteristics |
 |---|---|---|---|---|---|---|
-| `F2BJRLP1` | WBUR News Broadcast | 16 kHz Mono | 25.31 s | 68 words | 344 phones | Fast articulation, acronyms (*S.J.C.*, *WBUR*), proper names (*Hennessy*, *Dukakis*). |
-| `F2BJRLP2` | WBUR News Broadcast | 16 kHz Mono | 28.65 s | 73 words | 405 phones | Compound numerals (*seventy-six*, *seventy-one*), political legal speech. |
-| `F2BJRLP3` | WBUR News Broadcast | 16 kHz Mono | 30.71 s | 80 words | 444 phones | High information density, numerals (*eight hundred*, *thirty-five*). |
-| `ISLE_..._01` | Controlled Read Speech | 16 kHz Mono | 4.12 s | 5 words | 17 phones | Minimal pair diphthong contrast: *"WHITE"* (/aɪ/) vs *"BAIT"* (/eɪ/). |
-| `ISLE_..._02` | Controlled Read Speech | 16 kHz Mono | 3.88 s | 5 words | 13 phones | Minimal pair vowel contrast: *"NEW"* (/u/) vs *"NO"* (/oʊ/). |
-| `ISLE_..._03` | Controlled Read Speech | 16 kHz Mono | 4.50 s | 5 words | 14 phones | Minimal pair low-front contrast: *"BAD"* (/æ/) vs *"BED"* (/ɛ/). |
+| `F2BJRLP1` | WBUR News Broadcast | 16 kHz Mono | 25.31 s | 68 words | 307 phones | Fast articulation, acronyms (*S.J.C.*, *WBUR*), proper names (*Hennessy*, *Dukakis*). |
+| `F2BJRLP2` | WBUR News Broadcast | 16 kHz Mono | 28.65 s | 73 words | 345 phones | Compound numerals (*seventy-six*, *seventy-one*), political legal speech. |
+| `F2BJRLP3` | WBUR News Broadcast | 16 kHz Mono | 30.71 s | 80 words | 372 phones | High information density, numerals (*eight hundred*, *thirty-five*). |
+| `ISLE_..._01` | Controlled Read Speech | 16 kHz Mono | 4.12 s | 5 words | 13 phones | Minimal pair diphthong contrast: *"WHITE"* (/aɪ/) vs *"BAIT"* (/eɪ/). |
+| `ISLE_..._02` | Controlled Read Speech | 16 kHz Mono | 3.88 s | 5 words | 11 phones | Minimal pair vowel contrast: *"NEW"* (/u/) vs *"NO"* (/oʊ/). |
+| `ISLE_..._03` | Controlled Read Speech | 16 kHz Mono | 4.50 s | 5 words | 13 phones | Minimal pair low-front contrast: *"BAD"* (/æ/) vs *"BED"* (/ɛ/). |
 
 ---
 

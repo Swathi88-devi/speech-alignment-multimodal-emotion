@@ -11,6 +11,7 @@ from torch.utils.data import Dataset, DataLoader
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CACHE = os.path.join(BASE_DIR, "tess_preprocessed.pt")
+TEST_CACHE = os.path.join(BASE_DIR, "tess_test_cache.pt")
 
 class TESSDataset(Dataset):
     def __init__(self, items):
@@ -32,18 +33,27 @@ class TESSDataset(Dataset):
         }
 
 def get_dataloaders(batch_size=32, cache_path=DEFAULT_CACHE):
+    # Fallback to test_cache if full preprocessed cache is not present
     if not os.path.exists(cache_path):
-        raise FileNotFoundError(f"Cache file {cache_path} not found! Run preprocess.py first.")
+        if os.path.exists(TEST_CACHE):
+            print(f"[Notice] Full training cache ({cache_path}) not found. Loading included test evaluation cache ({TEST_CACHE}).")
+            cache_path = TEST_CACHE
+        else:
+            raise FileNotFoundError(
+                f"Cache file {cache_path} not found!\n"
+                f"To train from scratch, please download TESS and run python project/data/preprocess.py\n"
+                f"Dataset source: https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess"
+            )
         
     data = torch.load(cache_path, weights_only=False)
     
-    train_ds = TESSDataset(data["train"])
-    val_ds = TESSDataset(data["val"])
-    test_ds = TESSDataset(data["test"])
+    train_ds = TESSDataset(data.get("train", []))
+    val_ds = TESSDataset(data.get("val", []))
+    test_ds = TESSDataset(data.get("test", []))
     
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False)
-    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False)
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True) if len(train_ds) > 0 else None
+    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False) if len(val_ds) > 0 else None
+    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False) if len(test_ds) > 0 else None
     
     metadata = {
         "vocab": data["vocab"],

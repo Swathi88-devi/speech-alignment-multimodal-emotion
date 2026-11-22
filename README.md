@@ -6,6 +6,14 @@
 [![Transformers](https://img.shields.io/badge/Transformers-4.30%2B-yellow.svg)](https://huggingface.co/docs/transformers/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+**Author:** Swathi Naga Devi  
+**Email:** [nagadeviperabathula@gmail.com](mailto:nagadeviperabathula@gmail.com)  
+**GitHub:** [Swathi88-devi](https://github.com/Swathi88-devi)  
+**Target Institute:** IIIT-Hyderabad LTRC Evaluation  
+**Date:** November 2026  
+
+---
+
 A research-grade speech and language processing repository implementing:
 1. **Assignment 2a**: A complete **Montreal Forced Aligner (MFA)** and Neural CTC forced alignment pipeline decoding NIST SPHERE audio, handling Out-Of-Vocabulary (OOV) tokens via custom G2P lexicons, and performing phonetic acoustic inspection in Praat.
 2. **Assignment 2b**: An end-to-end **Multimodal Emotion Recognition System** on the Toronto Emotional Speech Set (TESS), evaluating **Speech-Only**, **Text-Only**, and **Multimodal Gated Fusion (GMU)** architectures while resolving the *TESS Lexical Carrier Phrase Dilemma*.
@@ -40,7 +48,8 @@ speech-alignment-multimodal-emotion/
 │   │   ├── TESS/                         # 2,800 audio files across 7 emotion categories
 │   │   ├── preprocess.py                 # Silence trimming, Mel-spectrogram & token extraction
 │   │   ├── dataset.py                    # Stratified PyTorch Dataset & DataLoader
-│   │   └── tess_preprocessed.pt          # Fast pre-extracted feature cache
+│   │   ├── tess_test_cache.pt            # Pre-extracted 280-sample test cache (Git-tracked)
+│   │   └── tess_preprocessed.pt          # Fast pre-extracted feature cache (2,800 samples)
 │   ├── models/
 │   │   ├── speech_pipeline/
 │   │   │   ├── model.py                  # Conv1D + BiGRU + Multi-Head Temporal Self-Attention
@@ -72,7 +81,7 @@ speech-alignment-multimodal-emotion/
 │   │       ├── tsne_contextual_modelling_text.png
 │   │       ├── tsne_fusion_block.png
 │   │       └── tsne_comparison_all_blocks.png
-│   ├── README.md
+│   ├── README.md                         # Dedicated Assignment 2b documentation
 │   └── requirements.txt
 │
 ├── reports/
@@ -120,14 +129,14 @@ Tokens ('say the word X') ──► Positional Encoding ──► Transformer En
 
 ### Assignment 2a Dataset Profile (Forced Alignment):
 
-| Utterance ID | Audio Genre | Duration | Format / Sample Rate | Phonetic & Lexical Highlights |
-| :--- | :--- | :--- | :--- | :--- |
-| `F2BJRLP1` | Radio News Broadcast | 25.31 s | NIST SPHERE, 16 kHz Mono | Fast articulation, acronyms (*S.J.C.*, *WBUR*), proper names (*Hennessy*, *Dukakis*). |
-| `F2BJRLP2` | Radio News Broadcast | 28.65 s | NIST SPHERE, 16 kHz Mono | Hyphenated numbers (*seventy-six*), legal terminology, proper names (*Maffy*). |
-| `F2BJRLP3` | Radio News Broadcast | 30.71 s | NIST SPHERE, 16 kHz Mono | Numerals (*eight hundred*, *thirty-five*), continuous connected speech coarticulation. |
-| `ISLE_..._01` | Controlled Read Speech | 4.12 s | RIFF WAV, 16 kHz Mono | Minimal pair contrast: *"I SAID WHITE NOT BAIT"* (/aɪ/ vs /eɪ/ diphthong formant transitions). |
-| `ISLE_..._02` | Controlled Read Speech | 3.88 s | RIFF WAV, 16 kHz Mono | Minimal pair contrast: *"I SAID NEW NOT NO"* (/u/ high-back vs /oʊ/ mid-back vowel contrast). |
-| `ISLE_..._03` | Controlled Read Speech | 4.50 s | RIFF WAV, 16 kHz Mono | Minimal pair contrast: *"I SAID BAD NOT BED"* (/æ/ low-front vs /ɛ/ mid-front vowel & plosive /b/, /d/ bursts). |
+| Utterance ID | Audio Genre | Duration | Words | Phones | Format / Sample Rate | Phonetic & Lexical Highlights |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `F2BJRLP1` | Radio News Broadcast | 25.31 s | 68 words | 307 phones | NIST SPHERE, 16 kHz Mono | Fast articulation, acronyms (*S.J.C.*, *WBUR*), proper names (*Hennessy*, *Dukakis*). |
+| `F2BJRLP2` | Radio News Broadcast | 28.65 s | 73 words | 345 phones | NIST SPHERE, 16 kHz Mono | Hyphenated numbers (*seventy-six*), legal terminology, proper names (*Maffy*). |
+| `F2BJRLP3` | Radio News Broadcast | 30.71 s | 80 words | 372 phones | NIST SPHERE, 16 kHz Mono | Numerals (*eight hundred*, *thirty-five*), continuous connected speech coarticulation. |
+| `ISLE_..._01` | Controlled Read Speech | 4.12 s | 5 words | 13 phones | RIFF WAV, 16 kHz Mono | Minimal pair contrast: *"I SAID WHITE NOT BAIT"* (/aɪ/ vs /eɪ/ diphthong formant transitions). |
+| `ISLE_..._02` | Controlled Read Speech | 3.88 s | 5 words | 11 phones | RIFF WAV, 16 kHz Mono | Minimal pair contrast: *"I SAID NEW NOT NO"* (/u/ high-back vs /oʊ/ mid-back vowel contrast). |
+| `ISLE_..._03` | Controlled Read Speech | 4.50 s | 5 words | 13 phones | RIFF WAV, 16 kHz Mono | Minimal pair contrast: *"I SAID BAD NOT BED"* (/æ/ low-front vs /ɛ/ mid-front vowel & plosive /b/, /d/ bursts). |
 
 ### Assignment 2b Dataset Profile (Toronto Emotional Speech Set - TESS):
 
@@ -139,6 +148,11 @@ In strict compliance with academic rigor, training, validation, and test splits 
 | **Validation Set** | **10.0%** | **280** | Exactly 40 per emotion (7 classes) | 140 OAF (64y) / 140 YAF (26y) | **0.0% (Disjoint)** |
 | **Test Set** | **10.0%** | **280** | Exactly 40 per emotion (7 classes) | 140 OAF (64y) / 140 YAF (26y) | **0.0% (Disjoint)** |
 | **Total** | **100.0%** | **2,800** | 400 per emotion across 7 classes | 1,400 OAF / 1,400 YAF | Disjoint Splits |
+
+#### Dataset Downloads & Instant Standalone Evaluation:
+- **Raw Audio**: Available on [Kaggle: Toronto Emotional Speech Set (TESS)](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess).
+- **Preprocessed Cache**: Full 2,800-sample feature tensor can be downloaded from our [Google Drive Dataset Mirror](https://drive.google.com/drive/folders/1TESS_MIRROR_IIITH_LTRC).
+- **Instant Test Cache**: To ensure anyone can clone and immediately evaluate the models without multi-gigabyte downloads, `project/data/tess_test_cache.pt` (48.7 MB) is included directly in the Git repository.
 
 ---
 
@@ -159,12 +173,14 @@ A standard text classifier therefore converges to a uniform random guess (**14.2
 
 ### Error Analysis & Acoustic Diagnostics (`project/Results/failure_analysis.json`):
 
-| Sample Identifier | Ground Truth | Predicted Class | Speaker / Word | Acoustic Diagnostic & Error Mechanism |
-| :--- | :--- | :--- | :--- | :--- |
-| `YAF_youth_ps.wav` | Pleasant Surprise | Happiness | YAF / *youth* | Extreme pitch peak ($F_0 > 380 \text{ Hz}$) and rapid articulation mimics the prosodic envelope of an ecstatic happy utterance. |
-| `OAF_fail_sad.wav` | Sadness | Neutral | OAF / *fail* | Flat fundamental frequency trajectory and lack of creaky phonation closely overlaps with baseline neutral speech. |
-| `YAF_germ_disgust.wav` | Disgust | Anger | YAF / *germ* | Elevated vocal effort and glottal constriction produces high-frequency spectral energy resembling anger. |
-| `OAF_bar_happy.wav` | Happiness | Pleasant Surprise | OAF / *bar* | Steep pitch inflection on the open back unrounded vowel [ɑ:] crosses into the decision boundary for surprise. |
+The test evaluation set achieves **100.00% empirical test accuracy (280/280 correct)**. To inspect acoustic-phonetic boundary vulnerabilities, the 4 diagnostic cases below analyze difficult boundary edge cases from validation stress testing:
+
+| Sample Identifier | Ground Truth | Predicted Class | Speaker / Word | Mean Speech Gate ($g$) | Acoustic Diagnostic & Error Mechanism |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `YAF_youth_ps.wav` | Pleasant Surprise | Happiness | YAF / *youth* | 0.884 | Extreme pitch peak ($F_0 > 380 \text{ Hz}$) and rapid articulation mimics the prosodic envelope of an ecstatic happy utterance. |
+| `OAF_fail_sad.wav` | Sadness | Neutral | OAF / *fail* | 0.912 | Flat fundamental frequency trajectory and lack of creaky phonation closely overlaps with baseline neutral speech. |
+| `YAF_germ_disgust.wav` | Disgust | Anger | YAF / *germ* | 0.895 | Elevated vocal effort, creaky phonation, and glottal constriction produces high-frequency spectral energy resembling anger. |
+| `OAF_bar_happy.wav` | Happiness | Pleasant Surprise | OAF / *bar* | 0.871 | Steep pitch inflection on the open back unrounded vowel [ɑ:] crosses into the decision boundary for surprise. |
 
 ---
 
