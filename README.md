@@ -253,7 +253,7 @@ All plots will be located in `project/Results/plots/`, and comparative accuracy 
 The comprehensive technical reports are available in both PDF and Markdown formats:
 
 ### Master Technical Report (All-in-One):
-- 📄 **[Master PDF Report: reports/Final_Comprehensive_Technical_Report.pdf](reports/Final_Comprehensive_Technical_Report.pdf)** (4 Pages, Publication-Grade report with embedded Praat spectrograms, loss curves, and t-SNE cluster separability plots)
+- 📄 **[Master PDF Report: reports/Technical_Report.pdf](reports/Technical_Report.pdf)** (4 Pages, Publication-Grade report with embedded Praat spectrograms, loss curves, and t-SNE cluster separability plots)
 
 ### Assignment 2a (Montreal Forced Aligner):
 - 📄 **[PDF Report: reports/Report_Assignment_2a_MFA.pdf](reports/Report_Assignment_2a_MFA.pdf)**

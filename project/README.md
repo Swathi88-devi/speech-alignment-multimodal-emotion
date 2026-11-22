@@ -184,7 +184,7 @@ The clean 280-utterance test split achieves **100.00% empirical test accuracy (2
 
 ## 7. Deliverables & Technical Reports
 
-- 📄 **[Master PDF Report: reports/Final_Comprehensive_Technical_Report.pdf](../reports/Final_Comprehensive_Technical_Report.pdf)** (4 Pages, Publication-Grade Master Report)
+- 📄 **[Master PDF Report: reports/Technical_Report.pdf](../reports/Technical_Report.pdf)** (4 Pages, Publication-Grade Master Report)
 - 📄 **[Assignment 2b PDF Report: reports/Report_Assignment_2b_Multimodal.pdf](../reports/Report_Assignment_2b_Multimodal.pdf)**
 - 📝 [Assignment 2b Markdown Report: reports/Report_Assignment_2b_Multimodal.md](../reports/Report_Assignment_2b_Multimodal.md)
 
